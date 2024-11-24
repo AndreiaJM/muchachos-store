@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import Preco from './Preco';
 
 const Camiseta = ({ nome, imagem }) => {
   return (
-    <View style={styles.camiseta}>
+    <View style={styles.camiseta} >
+      <Text style={styles.texto}>Camiseta {nome}</Text>
       <Image source={imagem} style={[styles.imagem, styles.marginTop]} />
-      <Text style={styles.texto}>{nome}</Text>
+      <Preco/>
     </View>
   );
 };
@@ -16,12 +18,16 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   imagem: {
-    width: 200,
-    height: 200,
+    width: 170,
+    height: 250,
   },
   texto: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  marginTop: {
+    marginTop: 10,
   }
 });
 

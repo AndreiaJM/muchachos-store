@@ -5,6 +5,7 @@ const MuchachosLogo = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.logoText}>MuchachosStore</Text>
+      <Text style={styles.logoText}>Catálogo</Text>
     </View>
   );
 };
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 30,
+    paddingTop: 30,
   },
   logoText: {
     fontSize: 24,

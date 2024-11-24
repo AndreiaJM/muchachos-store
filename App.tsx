@@ -1,26 +1,14 @@
 import React, { useState } from 'react';
-import { View, FlatList, Image, Modal, TouchableOpacity } from 'react-native';
-// Import Image, Modal, and TouchableOpacity components
+import { Image, View, FlatList, Modal, TouchableOpacity, StyleSheet } from 'react-native'; // Import Image first
 
 import MuchachosLogo from './components/MuchachosLogo';
 import Rodape from './components/Rodape';
 import Camiseta from './components/Camiseta';
-import { StyleSheet } from 'react-native';
-
-const camisetas = [
-  { id: 1, nome: 'Camiseta One Piece', imagem: require('./assets/camisetaonepieace.jpg') },
-  { id: 2, nome: 'Camiseta InuYasha', imagem: require('./assets/camisetainuyasha.jpg') },
-  { id: 3, nome: 'Camiseta One Piece', imagem: require('./assets/camisetapokemon.jpg') }, // Fix image path
-  { id: 4, nome: 'Camiseta InuYasha', imagem: require('./assets/camisetasailormoon.jpg') },
-];
-
-interface Image {
-  source: string;
-}
+import { camisetas } from './database/camiseta'
 
 const App = () => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
-  const [expandedImage, setExpandedImage] = useState<Image | null>(null);
+  const [expandedImage, setExpandedImage] = useState<Image | any>(null);
 
   const handleImagePress = (image: Image) => {
     setIsImageExpanded(true);
@@ -38,7 +26,7 @@ const App = () => {
       <Image
         source={require('./assets/muchachosfundo.png')}
         style={styles.backgroundImage}
-        resizeMode="cover" // "contain", "stretch"
+        resizeMode="cover" // Experiment with "contain" or "stretch"
       />
 
       <View style={styles.content}>
@@ -80,22 +68,22 @@ const styles = StyleSheet.create({
     opacity: 0.3,
   },
   content: {
-    flex: 1, // Allow content to fill remaining space
-    padding: 20, // Add optional padding for visual separation
+    flex: 1,
+    padding: 10, 
   },
   headerSpacer: {
-    height: 100, // Adjust the height as needed
+    height: 100,
   },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background
+    backgroundColor: 'rgba(0, 0, 0, 0.7)', 
   },
   expandedImage: {
-    width: '100%', // Adjust width as needed
-    height: '80%', // Adjust height as needed
-    aspectRatio: 1, // Maintain aspect ratio for proper scaling
+    width: '100%', 
+    height: '80%', 
+    aspectRatio: 1,
   },
 });
 

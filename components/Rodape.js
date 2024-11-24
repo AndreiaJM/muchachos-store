@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native';
 const Rodape = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.logoText}>Rodape</Text>
+      <Text style={styles.logoText}>Entre em cotato conosco: 71 99225269</Text>
     </View>
   );
 };
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   logoText: {
-    fontSize: 24,
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#333',
   },
