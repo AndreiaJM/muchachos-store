@@ -1,3 +1,8 @@
+# Sobre o projeto
+
+- Trata-se de um prototipo para um um catalogo de produtos, para dispositivos moveis, feito para uma estamparia local;
+
+
 # Preparação do Ambiente para Rodar o Projeto React Native com Expo
 
 Este guia irá ajudá-lo a configurar seu ambiente para desenvolver e rodar um projeto React Native utilizando o Expo.
